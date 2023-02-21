@@ -1,0 +1,36 @@
+.cover{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    position: relative;
+   
+ 
+}
+.top-body{
+    padding: 6% 0;
+    clear: left;
+}
+.cover .container .top-body button{
+
+    font-size: 30px;
+    padding: 2% 6%;
+    border-radius: 40px;
+}
+
+.cover .container .top-body .affordable{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.cover .container .top-body .rec{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.cover .container .top-body p{
+    
+    font-size: 30px;
+    margin-bottom: 2%;
+}

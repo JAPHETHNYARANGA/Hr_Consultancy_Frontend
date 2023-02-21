@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-4 col-sm-12 ">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="height: 18rem;">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button class="btn btn-primary">Contact Us</button>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="height: 18rem;">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <button class="btn btn-primary">Contact Us</button>
+                </div>
+              </div>
+        </div> -->
+        <div class="col-md-4 col-sm-12" *ngFor="let listing of listings" >
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="height:fit-content">
+                <div class="card-body" >
+                  <ul>
+                    <li >
+                      <h2>{{ listing.position }}</h2>
+                      <p>{{ listing.Requirements }}</p>
+                      <p>{{ listing.benefits }}</p>
+                      <p>{{ listing.tasks }}</p>
+                      <p>{{ listing.name }}</p>
+                      <p>{{ listing.logo }}</p>
+                      <p>{{ listing.salary }}</p>
+                    </li>
+                  </ul>
+              </div>
+        </div>
+      </div>
+</div>

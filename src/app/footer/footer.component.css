@@ -1,0 +1,24 @@
+.my-5{
+    margin-top: 10%;
+}
+
+.container-fluid footer .container section .row .col-md-3 h6{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container-fluid footer .container section .row .col-md-3 p{
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+
+.container-fluid footer .container section .row .col-md-2 h6{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-fluid footer .container section .row .mt-3 p a{
+    font-size: 20px;
+    /* font-weight: bold; */
+    text-decoration: none;
+}

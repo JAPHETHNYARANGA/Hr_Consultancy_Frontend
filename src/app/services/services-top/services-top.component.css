@@ -1,0 +1,34 @@
+
+.container{
+    margin-top: 5%;
+    height:fit-content;
+}
+
+.container .labor-relations .row .col-md-6 img,
+.container .recruitment-Services .row .col-md-6 img,
+.container .hr-outsourcing .row .col-md-6 img,
+.container .hr-policy .row .col-md-6 img,
+.container .cv-screening .row .col-md-6 img,
+.container .hr-projects .row .col-md-6 img
+{
+    height: fit-content;
+    width: 60%;  
+}
+
+.container .uniform h3,
+.container .uniform .row .col-md-6 h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.container .uniform ul,
+.container .uniform p,
+.container .uniform .row .col-md-6 p{
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.uniform{
+    margin: 10% 0%;
+}

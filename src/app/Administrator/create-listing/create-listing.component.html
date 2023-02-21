@@ -1,0 +1,55 @@
+<div class="center">
+  <h1>Add Listing</h1>
+  <form (ngSubmit)="AddListing()">
+    <div class="inputbox">
+      <input type="text" required="required" />
+      <span>Position</span>
+    </div>
+    <div class="inputbox">
+      <input
+        type="text"
+        required="required"
+        [(ngModel)]="requirements"
+        name="requirements"
+      />
+      <span>Requirements</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" required="required" [(ngModel)]="tasks" name="tasks" />
+      <span>Tasks</span>
+    </div>
+    <div class="inputbox">
+      <input
+        type="text"
+        required="required"
+        [(ngModel)]="benefits"
+        name="benefits"
+      />
+      <span>Benefits</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" required="required" [(ngModel)]="name" name="name" />
+      <span>Name</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" required="required" [(ngModel)]="logo" name="logo" />
+      <span>Logo</span>
+    </div>
+    <div class="inputbox">
+      <input
+        type="number"
+        required="required"
+        [(ngModel)]="salary"
+        name="salary"
+      />
+      <span>Salary</span>
+    </div>
+  
+    <button
+      type="submit"
+      class="btn btn-primary btn-lg inputbox"
+      style="padding-left: 2.5rem; padding-right: 2.5rem">
+      Submit
+    </button>
+  </form>
+</div>

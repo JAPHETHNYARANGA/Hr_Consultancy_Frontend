@@ -1,0 +1,24 @@
+.business{
+    text-align: center;
+    margin-top: 10%;
+    background-color: azure;
+}
+.business h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+.business>p{
+    font-size: 30px;
+    margin: 2% 0;
+}
+.business .container .row .col-md-4 .card {
+  
+    margin-top: 5%;
+}
+.business .container .row .col-md-4 .card .card-body h4{
+    font-weight: bold;
+    font-size: 30px;
+}
+.business .container .row .col-md-4 .card .card-body p{
+    font-size: 20px;
+}

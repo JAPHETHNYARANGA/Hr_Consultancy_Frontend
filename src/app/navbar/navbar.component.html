@@ -1,0 +1,24 @@
+
+<nav class="container-fluid">
+    
+    <img src="assets/images/service.png" alt=""/>
+    
+    <ul class="list" [style.display]="showNavbar ? 'flex' : 'none'">
+        
+        
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="about">About</a></li>
+        <li><a routerLink="services">Services</a></li>
+        <li><a routerLink="contact">Contact</a></li>
+        <li><a routerLink="jobs" routerLinkActive="active">Jobs Available</a></li>
+       
+    </ul>
+
+    <i class="fa fa-bars" id="toggle" (click)="myMethod()"></i>
+</nav>
+
+
+
+
+
+

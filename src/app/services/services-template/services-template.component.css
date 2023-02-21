@@ -1,0 +1,25 @@
+.container .top{
+    margin-top: 5%;
+}
+.container .mid{
+    margin-top: 5%;
+}
+
+.container .mid h2,
+.container .top h2{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 2%;
+}
+
+.container .top h4{
+    font-size: 30px;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+.container .mid p,
+.container .top p{
+    font-size: 30px;
+    margin-bottom: 2%;
+}
+
