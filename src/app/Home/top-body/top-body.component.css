@@ -1,16 +1,26 @@
 .cover{
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("/assets/images/logo.png");
+    background-repeat: no-repeat;
     color: white;
+    font-weight: bold;
+    /* opacity: 0.4; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    background-position: center center;
+
+  
 }
 
 .container{
     position: relative;
-   
- 
+    /* height: 100vh !important; */
+    padding: 10% 0;
 }
 .top-body{
     padding: 6% 0;
     clear: left;
+    
 }
 .cover .container .top-body button{
 

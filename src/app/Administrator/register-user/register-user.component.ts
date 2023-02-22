@@ -3,6 +3,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/ApiServices/Register/register.service';
 import { UserService } from 'src/app/ApiServices/User/user.service';
+import { AuthenticatedUserService } from 'src/app/ApiServices/UserAuthentication/authenticated-user.service';
 import { DeleteUser } from 'src/app/classes/delete-user';
 import { Register } from 'src/app/classes/Register';
 import { User, UserListing } from 'src/app/classes/user';
@@ -20,7 +21,7 @@ export class RegisterUserComponent implements OnInit {
 
   // deleteUsers!: DeleteUser;
 
-  constructor(private router:Router, private registerService:RegisterService, private usersService:UserService){}
+  constructor(private router:Router, private registerService:RegisterService, private usersService:UserService, public authenticatedUser:AuthenticatedUserService){}
 
   @ViewChild('myForm')
   form!: ElementRef;
@@ -57,6 +58,10 @@ export class RegisterUserComponent implements OnInit {
   
 
   ngOnInit(): void {
+    if(!this.authenticatedUser.isAuthenticated()){
+      this.router.navigate([''], {replaceUrl:true});
+    }
+    
     this.usersService.getUsers().subscribe(response =>{
         this.users = response.users 
     });
@@ -72,5 +77,17 @@ export class RegisterUserComponent implements OnInit {
   //     }
   //   );
   // }
+
+
+  redirectToHome(){
+    this.router.navigate([''], {replaceUrl:true});
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    console.log(localStorage.getItem('token'))
+    console.log("button clicked")
+    this.router.navigate([''], {replaceUrl:true});
+  }
 
 }
