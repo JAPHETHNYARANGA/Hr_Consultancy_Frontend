@@ -15,8 +15,8 @@ export class AdminDashboardComponent implements OnInit {
 
   @ViewChild('sidebar')
   sidebar!: ElementRef;
-  @ViewChild('sidebarCollapse')
-  sideBarCollapse!: ElementRef;
+  
+  isMarginLeft: boolean = false;
 
   listings : Listing[] = [];
 
@@ -40,17 +40,16 @@ export class AdminDashboardComponent implements OnInit {
     this.loadListings()
     
   }
-
-  collapseSideBar(){
-    // const sidebarCollapse = this.renderer.selectRootElement('#sidebarCollapse');
-    // const sidebar = this.renderer.selectRootElement('#sidebar');
   
-    // // this.renderer.listen(sidebarCollapse, 'click', () => {
-    // //   this.renderer.addClass(sidebar, 'active');
-    // // });
-    // this.sidebar.nativeElement.addClass(sidebar,'active')
-    
-    console.log('toggle')
+
+  toggleClass() {
+    if (this.isMarginLeft) {
+      this.renderer.setStyle(this.sidebar.nativeElement, 'sidebar', '0px');
+      this.isMarginLeft = false;
+    } else {
+      this.renderer.setStyle(this.sidebar.nativeElement, 'sidebar', '-250px');
+      this.isMarginLeft = true;
+    }
   }
 
  
