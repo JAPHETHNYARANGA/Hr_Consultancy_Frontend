@@ -9,7 +9,7 @@ import { Register } from 'src/app/classes/Register';
 })
 export class ActivateService {
 
-  private apiUrl="http://127.0.0.1:8000/api/activate"
+  private apiUrl="https://api.goldspaceconsulting.co.ke/api/activate"
 
   constructor(private http:HttpClient) { }
 

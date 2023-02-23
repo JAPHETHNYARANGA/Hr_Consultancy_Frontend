@@ -34,6 +34,7 @@ export class LoginComponentComponent {
     
     navigateToRegister(){
       this.router.navigate(['/activate'], {replaceUrl:true});
+      
     }
 
 }

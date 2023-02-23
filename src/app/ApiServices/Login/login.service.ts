@@ -8,7 +8,7 @@ import { Login } from 'src/app/classes/Login';
 })
 export class LoginService {
 
-  private apiUrl="http://127.0.0.1:8000/api/login"
+  private apiUrl="https://api.goldspaceconsulting.co.ke/api/login"
 
   constructor(private http:HttpClient) { }
 

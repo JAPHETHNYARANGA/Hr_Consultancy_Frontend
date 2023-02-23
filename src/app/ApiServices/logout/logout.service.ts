@@ -15,7 +15,7 @@ export class LogoutService {
     'Authorization': `Bearer ${this.token}`
   });
 
-  private apiUrl = "http://127.0.0.1:8000/api/logout"
+  private apiUrl = "https://api.goldspaceconsulting.co.ke/api/logout"
 
   constructor(private http: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Listing, ListingResponse } from 'src/app/classes/listings';
 })
 export class JobsService {
 
-  private apiUrl = 'http://127.0.0.1:8000/api/allJobs';
+  private apiUrl = 'https://api.goldspaceconsulting.co.ke/api/allJobs';
 
   
 

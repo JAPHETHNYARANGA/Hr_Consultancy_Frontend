@@ -16,7 +16,7 @@ export class PostJobsService {
     'Authorization': `Bearer ${this.token}`
   });
 
-  private apiUrl = "http://127.0.0.1:8000/api/addJob";
+  private apiUrl = "https://api.goldspaceconsulting.co.ke/api/addJob";
 
   constructor(private http:HttpClient){}
 

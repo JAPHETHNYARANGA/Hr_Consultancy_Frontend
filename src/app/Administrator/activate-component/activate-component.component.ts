@@ -18,9 +18,9 @@ export class ActivateComponentComponent implements OnInit {
     constructor(private router:Router, private activateService:ActivateService, public authenticatedUser:AuthenticatedUserService){}
 
     ngOnInit(): void {
-      if(!this.authenticatedUser.isAuthenticated()){
-        this.router.navigate([''], {replaceUrl:true});
-      }
+      // if(!this.authenticatedUser.isAuthenticated()){
+      //   this.router.navigate([''], {replaceUrl:true});
+      // }
     }
     
     register(){

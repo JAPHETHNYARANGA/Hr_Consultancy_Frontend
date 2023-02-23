@@ -17,7 +17,7 @@ export class UserService {
   });
    
 
-   private apiUrl = 'http://127.0.0.1:8000/api/users' ;
+   private apiUrl = 'https://api.goldspaceconsulting.co.ke/api/users' ;
   
 
   // private deleteUserapiUrl = 'http://127.0.0.1:8000/api/deleteUser/${id}';
