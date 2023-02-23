@@ -108,7 +108,7 @@
             type="text" 
             class="form-control  m-3"
             id="exampleFormControlInput1"
-            placeholder="name@example.com" [(ngModel)]="email" name="email"          />
+            placeholder="name@example.com" [(ngModel)]="email" name="email"/>
         </div>
         <button class="btn btn-success m-3" type="submit">Register User</button>
         
@@ -128,7 +128,7 @@
                       <div *ngIf="user.active == 0">
                         Not Active
                       </div>
-                      <button class="btn btn-danger m-2">Delete User</button>
+                      <button class="btn btn-danger m-2"(click)="deleteuser(user.id)">Delete User</button>
                     </li>
                   </ul>
               </div>

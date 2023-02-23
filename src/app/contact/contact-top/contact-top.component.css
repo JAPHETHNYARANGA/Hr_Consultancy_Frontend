@@ -20,3 +20,16 @@
     color: green;
 }
 
+.container .row .col-md-6 button{
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 30px;
+    
+}
+
+.container .row .col-md-6 button a{
+   color: white;
+   text-decoration: none;
+    
+}

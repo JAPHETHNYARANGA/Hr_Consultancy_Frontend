@@ -6,7 +6,7 @@ import { Logout } from 'src/app/classes/logout';
 @Injectable({
   providedIn: 'root'
 })
-export class LogoutService {
+export class DeleteListingsService {
 
   private token = localStorage.getItem('token');
 
@@ -14,13 +14,12 @@ export class LogoutService {
    private headers = new HttpHeaders({
     'Authorization': `Bearer ${this.token}`
   });
+  private apiUrl = "http://127.0.0.1:8000/api";
 
-  private apiUrl = "http://127.0.0.1:8000/api/logout"
+  constructor(private http:HttpClient) { }
 
-  constructor(private http: HttpClient) { }
-
-  logout():Observable<Logout> {
-    return this.http.get<Logout>(this.apiUrl,  {headers:this.headers})
-    
+  deleteJobs(id:number):Observable<any>{
+      const url =`${this.apiUrl}/deleteJob/${id}`; 
+      return this.http.get(url,{headers:this.headers});
   }
 }

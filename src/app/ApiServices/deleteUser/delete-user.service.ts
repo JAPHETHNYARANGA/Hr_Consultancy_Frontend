@@ -1,12 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Logout } from 'src/app/classes/logout';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LogoutService {
+export class DeleteUserService {
 
   private token = localStorage.getItem('token');
 
@@ -15,12 +14,12 @@ export class LogoutService {
     'Authorization': `Bearer ${this.token}`
   });
 
-  private apiUrl = "http://127.0.0.1:8000/api/logout"
+  private apiUrl = "http://127.0.0.1:8000/api";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http:HttpClient) { }
 
-  logout():Observable<Logout> {
-    return this.http.get<Logout>(this.apiUrl,  {headers:this.headers})
-    
+  DeleteUser(id:number):Observable<any>{
+    const url =`${this.apiUrl}/deleteuser/${id}`; 
+    return this.http.get(url,{headers:this.headers});
   }
 }

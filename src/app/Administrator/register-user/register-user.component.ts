@@ -1,6 +1,7 @@
 
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { DeleteUserService } from 'src/app/ApiServices/deleteUser/delete-user.service';
 import { RegisterService } from 'src/app/ApiServices/Register/register.service';
 import { UserService } from 'src/app/ApiServices/User/user.service';
 import { AuthenticatedUserService } from 'src/app/ApiServices/UserAuthentication/authenticated-user.service';
@@ -21,11 +22,13 @@ export class RegisterUserComponent implements OnInit {
 
   // deleteUsers!: DeleteUser;
 
-  constructor(private router:Router, private registerService:RegisterService, private usersService:UserService, public authenticatedUser:AuthenticatedUserService){}
+  constructor(private router:Router, private registerService:RegisterService, private usersService:UserService,
+     public authenticatedUser:AuthenticatedUserService, private deleteuserservice:DeleteUserService){}
 
   @ViewChild('myForm')
   form!: ElementRef;
   isFormVisible = false;
+
 
   toggleForm(){
     if(this.isFormVisible){
@@ -44,39 +47,39 @@ export class RegisterUserComponent implements OnInit {
     this.router.navigate(['/registerUser'],{replaceUrl:true});
   }
 
+  loadUsers(){
+    this.usersService.getUsers().subscribe(response =>{
+      this.users = response.users 
+  });
+  }
 
   registerUser(){
     this.registerService.registerUser(this.email).subscribe((response:Register)=>{
       if(response.success == true){
-        this.router.navigate(['/registerUser']);
+        this.loadUsers()
+
       }else{
         console.log(response.message)
       }
     })
   }
 
+ 
   
 
   ngOnInit(): void {
     if(!this.authenticatedUser.isAuthenticated()){
       this.router.navigate([''], {replaceUrl:true});
     }
+    this.loadUsers()
     
-    this.usersService.getUsers().subscribe(response =>{
-        this.users = response.users 
-    });
   }
 
-  // deleteUser(User:User){
-  //   this.usersService.deleteUser().subscribe(
-  //     ()=>{
-
-  //     },
-  //     (error) =>{
-
-  //     }
-  //   );
-  // }
+  deleteuser(id:number){
+    this.deleteuserservice.DeleteUser(id).subscribe(()=>{
+        this.loadUsers()
+    })
+  }
 
 
   redirectToHome(){
