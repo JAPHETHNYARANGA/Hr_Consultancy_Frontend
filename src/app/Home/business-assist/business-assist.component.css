@@ -1,6 +1,5 @@
 .business{
     text-align: center;
-    margin-top: 10%;
     background-color: azure;
 }
 .business h3{
@@ -21,4 +20,22 @@
 }
 .business .container .row .col-md-4 .card .card-body p{
     font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .business>h3{
+        font-size: 2rem;
+    }
+    .business>p{
+        font-size: 1rem;
+    }
+
+    .business>.container>.row>.col-md-4>.card>.card-body>h4{
+        font-size: 2rem;
+    }
+    .business>.container>.row>.col-md-4>.card>.card-body>p{
+        font-size: 1rem;
+    }
+
 }

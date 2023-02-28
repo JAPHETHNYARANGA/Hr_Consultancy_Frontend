@@ -1,26 +1,23 @@
-.cover{
-    /* background-color: black; */
+/* .cover{
     background-image: url("/assets/images/logo.png");
     background-repeat: no-repeat;
     color: white;
     font-weight: bold;
-    /* opacity: 0.4; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
     background-position: center center;
-
-  
+} */
+.cover{
+    margin-bottom: 10%;
 }
+.cover .container .top-body .image img{
+   
+    width: 80%;
+
+   }
 
 .container{
     position: relative;
     /* height: 100vh !important; */
-    padding: 10% 0;
-}
-.top-body{
-    padding: 6% 0;
-    clear: left;
-    
+    padding-top: 5%;
 }
 .cover .container .top-body button{
 
@@ -48,8 +45,32 @@
 
 @media screen and (max-width: 600px) {
 
-        .cover{
-        display: none; 
-        }
+       .cover{
+        margin-top: 5%;
+       }
+       .cover .container .top-body .col-md-6 img{
+        margin-top: 5%;
+       }
+
+       h3{
+        font-size: 2rem;
+       }
+       p{
+        font-size: 1rem;
+       }
+       button{
+        font-size: 1rem;
+       }
+
+       .cover>.container>.top-body>.col-md-6>h3{
+        font-size: 2rem;
+       }
+       .cover>.container>.top-body>.col-md-6>p{
+        font-size: 1rem;
+       }
+       .cover>.container>.top-body>.col-md-6>button{
+        margin: 3% 0%;
+        font-size: 20px;
+       }
 
 }

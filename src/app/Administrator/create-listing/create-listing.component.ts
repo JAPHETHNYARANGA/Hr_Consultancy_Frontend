@@ -11,7 +11,7 @@ import { PostJob } from 'src/app/classes/post-job';
   styleUrls: ['./create-listing.component.css']
 })
 export class CreateListingComponent implements OnInit {
-
+  position:string='';
   requirements:string='';
   tasks:string='';
   benefits:string='';
@@ -27,7 +27,7 @@ export class CreateListingComponent implements OnInit {
     }
   }
   AddListing(){
-      this.postJobsService.CreateListing(this.requirements, this.tasks, this.benefits, this.name, this.logo, this.salary)
+      this.postJobsService.CreateListing(this.position,this.requirements, this.tasks, this.benefits, this.name,  this.salary,this.logo)
       .subscribe((response:PostJob)=>{
         if(response.success){
           this.router.navigate(['/dashboard']);

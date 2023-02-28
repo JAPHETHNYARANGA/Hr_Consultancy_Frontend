@@ -21,9 +21,9 @@ export class PostJobsService {
   constructor(private http:HttpClient){}
 
   CreateListing(position:string, requirements:string, benefits:string,
-     tasks:string,name:string, salary:number):Observable<PostJob>{
+     tasks:string,name:string, salary:number, logo:string):Observable<PostJob>{
       const body = {position:position, requirements:requirements, benefits:benefits,
-      tasks:tasks, name:name, salary:salary};
+      tasks:tasks, name:name, salary:salary, logo:logo};
       return this.http.post<PostJob>(this.apiUrl, body, {headers:this.headers})
      }
 }

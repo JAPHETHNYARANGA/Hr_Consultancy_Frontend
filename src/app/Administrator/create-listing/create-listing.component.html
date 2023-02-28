@@ -1,50 +1,94 @@
 <div class="center">
   <h1>Add Listing</h1>
   <form (ngSubmit)="AddListing()">
-    <div class="inputbox">
-      <input type="text" required="required" />
+    <!-- <div class="inputbox">
+      <input type="text" required="required" [(ngModel)]="position" name="position" />
       <span>Position</span>
     </div>
     <div class="inputbox">
-      <input
-        type="text"
-        required="required"
-        [(ngModel)]="requirements"
-        name="requirements"
-      />
-      <span>Requirements</span>
+     
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Requirements</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="requirements"
+        name="requirements"></textarea>
+      </div>
+     
+     
+      
     </div>
     <div class="inputbox">
-      <input type="text" required="required" [(ngModel)]="tasks" name="tasks" />
-      <span>Tasks</span>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Tasks</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="tasks" name="tasks"></textarea>
+      </div>
+     
     </div>
     <div class="inputbox">
-      <input
-        type="text"
-        required="required"
-        [(ngModel)]="benefits"
-        name="benefits"
-      />
-      <span>Benefits</span>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Benefits</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" [(ngModel)]="benefits"
+        name="benefits"></textarea>
+      </div>
+     
     </div>
-    <div class="inputbox">
+    <div class="space"></div>
+    <div class="inputbox hiring">
       <input type="text" required="required" [(ngModel)]="name" name="name" />
-      <span>Name</span>
+      <span>Hiring Company</span>
     </div>
-    <div class="inputbox">
-      <input type="text" required="required" [(ngModel)]="logo" name="logo" />
-      <span>Logo</span>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Application Deadline Date</label>
+      <input type="date" required="required" [(ngModel)]="logo" name="logo" class="form-control"/>
+      
     </div>
     <div class="inputbox">
       <input
         type="number"
         required="required"
-        [(ngModel)]="salary"
-        name="salary"
+       
       />
       <span>Salary</span>
-    </div>
+    </div> -->
   
+    <div class="form-outline">
+      <label class="form-label" for="typeEmail">Position</label>
+      <input type="text" id="typeEmail" class="form-control" required="required" [(ngModel)]="position" name="position" />
+    </div>
+
+    <div class="form-outline">
+      <label class="form-label" for="textAreaExample">Requirements</label>
+      <textarea class="form-control" id="textAreaExample" rows="4" [(ngModel)]="requirements"
+      name="requirements"></textarea>
+    </div>
+
+    <div class="form-outline">
+      <label class="form-label" for="textAreaExample">Tasks</label>
+      <textarea class="form-control" id="textAreaExample" rows="4" [(ngModel)]="tasks" name="tasks"></textarea>
+    </div>
+
+    <div class="form-outline">
+      <label class="form-label" for="textAreaExample">Benefits</label>
+      <textarea class="form-control" id="textAreaExample" rows="4" [(ngModel)]="benefits"
+      name="benefits"></textarea>
+    </div>
+    
+    <div class="form-outline">
+      <label class="form-label" for="typeEmail">Name of hiring Company</label>
+      <input type="text" id="typeEmail" class="form-control" required="required"[(ngModel)]="name" name="name" />
+    </div>
+
+    <div class="form-outline">
+      <label class="form-label" for="typeEmail">Application Deadline date</label>
+      <input type="date" id="typeEmail" class="form-control" required="required"[(ngModel)]="logo" name="logo" />
+    </div>
+    <div class="form-outline">
+      <label class="form-label" for="typeEmail">Salary Expected</label>
+      <input type="number" id="typeEmail" class="form-control" required="required" [(ngModel)]="salary"
+      name="salary" />
+    </div>
+    
+   
+
     <button
       type="submit"
       class="btn btn-primary btn-lg inputbox"

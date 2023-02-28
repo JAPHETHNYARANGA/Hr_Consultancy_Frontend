@@ -32,3 +32,23 @@
     font-size: 20px;
     margin-bottom: 2%;
 }
+
+@media screen and (max-width: 600px) {
+    .container>h2,
+    .container>h3{
+        font-size: 2rem;
+    }
+    .container>p{
+        font-size: 1rem;
+    }
+    .container>.row>.col-md-4>.card>.card-body>h3{
+        font-size: 2rem;
+    }
+    .container>.row>.col-md-4>.card>.card-body>p{
+        font-size: 1rem;
+    }
+    .container>.row>.col-md-4>.card>.card-body>ul>li{
+        font-size: 1rem;
+    }
+   
+  }

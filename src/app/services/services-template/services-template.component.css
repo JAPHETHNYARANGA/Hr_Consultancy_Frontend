@@ -23,3 +23,16 @@
     margin-bottom: 2%;
 }
 
+@media screen and (max-width: 600px) {
+  .container>.mid>h2,
+  .container>.top>h2,
+  .container>.top>h3{
+    font-size: 2rem;
+  }
+ 
+  .container>.mid>p,
+  .container>.top>p{
+    font-size: 1rem;
+  }
+
+}

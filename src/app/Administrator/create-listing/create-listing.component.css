@@ -34,20 +34,11 @@ body {
   position: relative;
   width: 300px;
   height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 20%;
+  margin-top: 10%;
 }
-.center .inputbox input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border: 2px solid #000;
-  outline: none;
-  background: none;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1.2em;
-}
+
+
 .center .inputbox:last-child {
   margin-bottom: 0;
 }
@@ -73,3 +64,26 @@ body {
 .center .inputbox:hover [type="button"] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
 }
+
+h6{
+  color: green;
+  font-size: 1.5rem;
+}
+
+
+/* .center>form> */
+.center>form>.form-outline{
+ margin-top: 10%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .center{
+    margin-top: 15%;
+  }
+  .center>form>.form-outline{
+    margin-top: 1%;
+   }
+}
+
