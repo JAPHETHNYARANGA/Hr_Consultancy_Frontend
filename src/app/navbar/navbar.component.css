@@ -25,7 +25,7 @@ nav{
 
 
 
-li a{
+.container-fluid ul li a{
     display: block;
     color: white;
     text-align: center;
@@ -39,8 +39,13 @@ nav i{
     display: none;
 }
 
-li a:hover:not(.active) {
-    color: white;
+.container-fluid ul li ul li a{
+    color: black;
+}
+
+.container-fluid ul li ul li a:hover,
+.container-fluid ul li a:hover:not(.active) {
+    color: green;
   }
   
   .active {
@@ -85,6 +90,10 @@ ul li:hover ul.dropdown {
 ul li ul.dropdown li {
     display: block;
 }
+
+
+
+
 
 /* end */
   
