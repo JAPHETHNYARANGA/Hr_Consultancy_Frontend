@@ -14,6 +14,7 @@ import { RegisterUserComponent } from './Administrator/register-user/register-us
 import { ContactTemplateComponent } from './contact/contact-template/contact-template.component';
 import { HomeTemplateComponent } from './Home/home-template/home-template.component';
 import { JobsTemplateComponent } from './jobs/jobs-template/jobs-template.component';
+import { ClientServicesComponent } from './services/client-services/client-services.component';
 import { ServicesTemplateComponent } from './services/services-template/services-template.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'about', component:AboutTemplateComponent},
   // {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path:'services', component:ServicesTemplateComponent},
+  {path:'client-services', component:ClientServicesComponent},
   {path:'contact', component:ContactTemplateComponent},
   {path:'jobs', component:JobsTemplateComponent},
   {path:'login', component:LoginComponentComponent},

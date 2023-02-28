@@ -1,6 +1,6 @@
 .container{
-    margin-top: 10%;
-    margin-bottom: 5%;
+    padding-top: 10%;
+    height: 59%;
 }
 .container .row .col-md-6 h2{
     font-weight: bold;

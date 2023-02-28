@@ -6,11 +6,17 @@
     <ul class="list" [style.display]="showNavbar ? 'flex' : 'none'">
         
         
-        <li><a routerLink="">Home</a></li>
-        <li><a routerLink="about">About</a></li>
-        <li><a routerLink="services">Services</a></li>
-        <li><a routerLink="contact">Contact</a></li>
-        <li><a routerLink="jobs" routerLinkActive="active">Jobs Available</a></li>
+        <li><a routerLink="" (click)="myMethod()">Home</a></li>
+        <li><a routerLink="about" (click)="myMethod()">About</a></li>
+        <li>
+            <a >Services ▾</a>
+            <ul class="dropdown">
+                <li><a  routerLink="services" (click)="myMethod()">For Company</a></li>
+                <li><a routerLink="client-services" (click)="myMethod()">For Job Seekers</a></li>
+            </ul>
+        </li>
+        <li><a routerLink="contact" (click)="myMethod()">Contact</a></li>
+        <li><a routerLink="jobs" routerLinkActive="active" (click)="myMethod()">Jobs Available</a></li>
        
     </ul>
 

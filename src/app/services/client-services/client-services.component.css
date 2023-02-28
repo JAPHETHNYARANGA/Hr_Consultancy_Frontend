@@ -22,6 +22,10 @@
     font-size: 30px;
     margin-bottom: 2%;
 }
+.container>.mid>ul>li{
+    font-size: 2rem;
+    font-weight: bold;
+  }
 
 @media screen and (max-width: 600px) {
   .container>.mid>h2,
@@ -32,6 +36,13 @@
  
   .container>.mid>p,
   .container>.top>p{
+    font-size: 1rem;
+  }
+  .container>.mid>ul>li{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .container>.mid>ul>p{
     font-size: 1rem;
   }
 

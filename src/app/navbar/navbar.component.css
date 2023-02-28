@@ -8,20 +8,20 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 2% 1%;
-    /* position: static; */
-    
+    position: fixed;
+    z-index: 2;
 }
-ul{
+/* ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
    
     
-}
-nav ul li{
+} */
+/* nav ul li{
     float: left;
-}
+} */
 
 
 
@@ -40,13 +40,53 @@ nav i{
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    color: white;
   }
   
   .active {
     background-color: #04AA6D;
   }
 
+  /* start */
+  /* ul {
+    padding: 0;
+    list-style: none;
+    background: #f2f2f2;
+} */
+ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+}
+ul li a {
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+  /* ul li a:hover {
+    color: #fff;
+    background: #939393;
+} */
+ul li ul.dropdown {
+    min-width: 100%; /* Set width of the dropdown */
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    color: green;
+    left: 0;
+}
+ul li:hover ul.dropdown {
+    display: block; /* Display the dropdown */
+}
+ul li ul.dropdown li {
+    display: block;
+}
+
+/* end */
   
 @media screen and (max-width: 600px) {
     nav i{

@@ -14,10 +14,11 @@
 
    }
 
+
 .container{
     position: relative;
     /* height: 100vh !important; */
-    padding-top: 5%;
+    padding-top: 15%;
 }
 .cover .container .top-body button{
 
@@ -45,9 +46,7 @@
 
 @media screen and (max-width: 600px) {
 
-       .cover{
-        margin-top: 5%;
-       }
+       
        .cover .container .top-body .col-md-6 img{
         margin-top: 5%;
        }

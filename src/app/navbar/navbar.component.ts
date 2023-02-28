@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  showNavbar = true;
+  showNavbar = false;
   myMethod() {
     this.showNavbar = !this.showNavbar;
   }

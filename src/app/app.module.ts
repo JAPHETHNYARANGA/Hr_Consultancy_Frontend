@@ -25,6 +25,7 @@ import { LoginComponentComponent } from './Administrator/login-component/login-c
 import { ActivateComponentComponent } from './Administrator/activate-component/activate-component.component';
 import { CreateListingComponent } from './Administrator/create-listing/create-listing.component';
 import { RegisterUserComponent } from './Administrator/register-user/register-user.component';
+import { ClientServicesComponent } from './services/client-services/client-services.component';
 
 
 
@@ -52,6 +53,7 @@ import { RegisterUserComponent } from './Administrator/register-user/register-us
     ActivateComponentComponent,
     CreateListingComponent,
     RegisterUserComponent,
+    ClientServicesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 .container{
     height: fit-content;
+    padding-top: 10%;
 }
 h6{
     color: green;
@@ -8,4 +9,5 @@ h6{
 
 .container>.row>.col-md-4>.card{
     margin-top: 10%;
+
 }
